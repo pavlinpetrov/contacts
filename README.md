@@ -1,2 +1,1 @@
-# contacts
-Demo
+# Contacts API
