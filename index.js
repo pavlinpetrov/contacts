@@ -13,6 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Controllers
+const ContactController = require('./controllers/ContactController');
 
 // Routes
 
