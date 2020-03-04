@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const { database, corsOptions } = require('./config');
-const cors = require('cors')
+const cors = require('cors');
 const app = express();
 
 // Database
