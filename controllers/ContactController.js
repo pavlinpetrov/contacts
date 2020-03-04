@@ -15,9 +15,9 @@ module.exports = {
             });
     },
     update: (req, res) => {
-        const { _id, firstName, lastName, email } = req.body;
+        const { id, firstName, lastName, email } = req.body;
 
-        ContactModel.updateOne({ _id }, { firstName, lastName, email })
+        ContactModel.updateOne({ _id: id }, { firstName, lastName, email })
             .then(result => {
                 res.json({ success: true, result });
             })
@@ -35,9 +35,9 @@ module.exports = {
             });
     },
     retrieve: (req, res) => {
-        const _id = req.params.id;
+        const { id } = req.params;
 
-        ContactModel.findOne({ _id })
+        ContactModel.findOne({ _id: id })
             .then(result => {
                 res.json({ success: true, result });
             })
@@ -46,9 +46,9 @@ module.exports = {
             });
     },
     delete: (req, res) => {
-        const { _id } = req.body;
+        const { id } = req.body;
 
-        ContactModel.remove({ _id })
+        ContactModel.remove({ _id : id })
             .then(result => {
                 res.json({ success: true, result });
             })
