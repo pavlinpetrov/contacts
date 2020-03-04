@@ -12,32 +12,32 @@ Installation is done using the  [`npm install`](https://docs.npmjs.com/getting-s
 
 
 ## Endpoints
-**GET**
-`/api/contacts/` - retrieves all contacts.
+**GET**  
+`/api/contacts/` - retrieves all contacts.  
 `/api/contacts/id` - retrieves a single contact.
 
-**POST**
-`/api/contacts/`- creates a contact.
-> Request body:
->  {
-&nbsp; &nbsp; "firstName": "John",
-&nbsp; &nbsp; "lastName": "Doe",
-&nbsp; &nbsp; "email": "johndoe@example.com"
+**POST**  
+`/api/contacts/`- creates a contact.  
+> Request body:  
+>  {  
+&nbsp; &nbsp; "firstName": "John",  
+&nbsp; &nbsp; "lastName": "Doe",  
+&nbsp; &nbsp; "email": "johndoe@example.com"  
 }
 
-**PUT**
-`/api/contacts/`- updates a contact.
-> Request body:
- {
-&nbsp; &nbsp; "id": "5e5f78e851bdc04140f411a8",
-&nbsp; &nbsp; "firstName": "Jane",
-&nbsp; &nbsp; "lastName": "Doe",
-&nbsp; &nbsp; "email": "janedoe@example.com"
+**PUT**  
+`/api/contacts/`- updates a contact.  
+> Request body:  
+ {  
+&nbsp; &nbsp; "id": "5e5f78e851bdc04140f411a8",  
+&nbsp; &nbsp; "firstName": "Jane",  
+&nbsp; &nbsp; "lastName": "Doe",  
+&nbsp; &nbsp; "email": "janedoe@example.com"  
 }
 
-**DELETE**
-`/api/contacts/`- removes a contact.
-> Request body:
-> {
-&nbsp; &nbsp; "id": "5e5f78e851bdc04140f411a8"
-}
+**DELETE**  
+`/api/contacts/`- removes a contact.  
+> Request body:  
+> {  
+&nbsp; &nbsp; "id": "5e5f78e851bdc04140f411a8"  
+}  
