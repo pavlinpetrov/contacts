@@ -13,5 +13,16 @@ module.exports = {
             .catch(err => {
                 res.json({ success: false, result: err.message });
             });
+    },
+    update: (req, res) => {
+        const { _id, firstName, lastName, email } = req.body;
+
+        ContactModel.updateOne({ _id }, { firstName, lastName, email })
+            .then(result => {
+                res.json({ success: true, result });
+            })
+            .catch(err => {
+                res.json({ success: false, result: err.message });
+            });
     }
 }
