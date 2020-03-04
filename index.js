@@ -12,10 +12,8 @@ mongoose.connect(`${database.host}${database.name}`, database.options)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Controllers
-const ContactController = require('./controllers/ContactController');
-
 // Routes
+app.use('/api/contacts', require('./routes/api/contacts'));
 
 // Start server
 const PORT = process.env.PORT || 3000;

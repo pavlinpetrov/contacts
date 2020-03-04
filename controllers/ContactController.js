@@ -11,7 +11,7 @@ module.exports = {
                 res.json({ success: true, result });
             })
             .catch(err => {
-                res.json({ success: false, result: err });
+                res.json({ success: false, result: err.message });
             });
     }
 }
