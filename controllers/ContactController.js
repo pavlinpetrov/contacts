@@ -37,7 +37,18 @@ module.exports = {
     retrieve: (req, res) => {
         const _id = req.params.id;
 
-        ContactModel.findOne({_id})
+        ContactModel.findOne({ _id })
+            .then(result => {
+                res.json({ success: true, result });
+            })
+            .catch(err => {
+                res.json({ success: false, result: err.message });
+            });
+    },
+    delete: (req, res) => {
+        const { _id } = req.body;
+
+        ContactModel.remove({ _id })
             .then(result => {
                 res.json({ success: true, result });
             })
