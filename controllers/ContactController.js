@@ -24,5 +24,25 @@ module.exports = {
             .catch(err => {
                 res.json({ success: false, result: err.message });
             });
+    },
+    retrieveAll: (req, res) => {
+        ContactModel.find()
+            .then(result => {
+                res.json({ success: true, result });
+            })
+            .catch(err => {
+                res.json({ success: false, result: err.message });
+            });
+    },
+    retrieve: (req, res) => {
+        const _id = req.params.id;
+
+        ContactModel.findOne({_id})
+            .then(result => {
+                res.json({ success: true, result });
+            })
+            .catch(err => {
+                res.json({ success: false, result: err.message });
+            });
     }
 }
